@@ -1,0 +1,6 @@
+*~
+config/database.yml
+log/*
+webdesign/*
+public/assets/*
+config/initializers/omniauth.rb
