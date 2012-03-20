@@ -1,7 +1,16 @@
 MySocialStuff::Application.routes.draw do
   
   
+  
+  # Authentication routes
+  match '/auth/google_oauth2/callback'  => "welcome#create_session"
+  match '/auth/failure' => "welcome#failure"
+  
+  match '/welcome/show' => "welcome#show"
+  
   root :to => "welcome#index"
+  
+  
   
   # The priority is based upon order of creation:
   # first created -> highest priority.

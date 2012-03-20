@@ -1,0 +1,15 @@
+<h1>Showtime</h1>
+
+<p>
+  Auth ist ein <%= auth.class %>
+</p>
+
+
+<p>
+  Mit diesen Werten:
+  <ul>
+    <% auth.keys.each do |k| -%>
+    <li><%= k.to_s + " -> " + auth[k].to_s -%> </li>
+    <% end unless auth.nil? %>
+  </ul>
+</p>
