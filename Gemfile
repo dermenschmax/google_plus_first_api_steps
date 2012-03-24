@@ -25,6 +25,8 @@ gem 'jquery-rails'
 gem 'omniauth-google-oauth2'
 gem 'execjs'
 gem 'therubyracer'
+gem 'google-api-client'
+gem 'hashie'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

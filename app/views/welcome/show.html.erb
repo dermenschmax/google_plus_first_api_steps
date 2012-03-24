@@ -1,15 +1,88 @@
-<h1>Showtime</h1>
-
-<p>
-  Auth ist ein <%= auth.class %>
-</p>
+<h1>Hallo, <%= @person_me.name.givenName unless @person_me.nil? || @person_me.name.nil? %></h1>
 
 
 <p>
-  Mit diesen Werten:
-  <ul>
-    <% auth.keys.each do |k| -%>
-    <li><%= k.to_s + " -> " + auth[k].to_s -%> </li>
-    <% end unless auth.nil? %>
-  </ul>
+  Deine Person:
+  <table>
+    <tr><td>etag: </td><td><%= @person_me.etag%></td></tr>
+    <tr><td>objectType: </td><td><%= @person_me.objectType%></td></tr>
+    <tr><td>id: </td><td><%= @person_me.id%></td></tr>
+    <tr><td>displayName: </td><td><%= @person_me.displayName%></td></tr>
+    <tr><td>nickname: </td><td><%= @person_me.nickname%></td></tr>
+    <tr><td>tagline: </td><td><%= @person_me.tagline%></td></tr>
+    <tr><td>birthday: </td><td><%= @person_me.birthday%></td></tr>
+    <tr><td>gender: </td><td><%= @person_me.gender%></td></tr>
+    <tr><td>aboutMe: </td><td><%= @person_me.aboutMe%></td></tr>
+    <tr><td>currentLocation: </td><td><%= @person_me.currentLocation%></td></tr>
+    <tr><td>relationshipStatus: </td><td><%= @person_me.relationshipStatus%></td></tr>
+    <tr><td>url: </td><td><%= @person_me.url%></td></tr>
+    <tr><td>img: </td><td><%= image_tag @person_me.image.url%></td></tr>
+  </table>
+  
+<!--{
+  "kind": "plus#person",
+  "etag": etag,
+  "objectType": string,
+  "id": string,
+  "displayName": string,
+  "name": {
+    "formatted": string,
+    "familyName": string,
+    "givenName": string,
+    "middleName": string,
+    "honorificPrefix": string,
+    "honorificSuffix": string
+  },
+  "nickname": string,
+  "tagline": string,
+  "birthday": string,
+  "gender": string,
+  "aboutMe": string,
+  "currentLocation": string,
+  "relationshipStatus": string,
+  "url": string,
+  "image": {
+    "url": string
+  },
+  "emails": [
+    {
+      "value": string,
+      "type": string,
+      "primary": boolean
+    }
+  ],
+  "urls": [
+    {
+      "value": string,
+      "type": string,
+      "primary": boolean
+    }
+  ],
+  "organizations": [
+    {
+      "name": string,
+      "department": string,
+      "title": string,
+      "type": string,
+      "startDate": string,
+      "endDate": string,
+      "location": string,
+      "description": string,
+      "primary": boolean
+    }
+  ],
+  "placesLived": [
+    {
+      "value": string,
+      "primary": boolean
+    }
+  ],
+  "languagesSpoken": [
+    string
+  ],
+  "hasApp": boolean
+}-->  
+  
+  
 </p>
+
